@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6 bg-black">
+            <nav className="h-100 flex items-center justify-between flex-wrap bg-teal-500 p-6 bg-black">
                 <div className="flex items-center flex-shrink-0 text-white mr-6 ">
                     <span className="font-semibold text-xl tracking-tight text-white text-xl">Portafolio</span>
                 </div>
