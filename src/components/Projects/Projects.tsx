@@ -7,23 +7,28 @@ import Mobile from './Mobile/Mobile'
 interface Project {
     project: "Web" | "Mobile" | "Next.js" | "React" | "All"
 }
+interface Projects {
+    dataProject: [
+        {
+
+            repo: string;
+            title: string;
+            description: string;
+            image: string;
+            url: string;
+            tecnologies: string[];
+        }
+    ]
 
 
-const Projects = () => {
+}
+
+
+const Projects = (dataProject: Projects) => {
+
+    console.log(dataProject.dataProject)
 
     const [projectToShow, setProjectToShow] = useState<Project>({ project: "All" })
-
-    console.log(projectToShow)
-
-    const sex = async () => {
-        const sexo = await fetch('http://localhost:3000/api/GetProyects')
-        const movies = await sexo.json()
-        console.log(movies)
-    }
-
-    sex()
-
-
 
     return (
         <div className="flex flex-col justify-center items-center w-full mt-20">
