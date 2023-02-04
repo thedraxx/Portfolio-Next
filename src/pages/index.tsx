@@ -5,23 +5,7 @@ import Projects from "@/components/Projects/Projects";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 import { GetStaticProps } from 'next';
 import "../../src/firebase/config.js";
-
-interface ProjectosInterface {
-  dataProject: [
-    {
-
-      repo: string;
-      title: string;
-      description: string;
-      image: string;
-      url: string;
-      tecnologies: string[];
-    }
-  ]
-
-
-}
-
+import { ProjectosInterface } from "@/interfaces/database.jsx";
 
 
 

@@ -3,30 +3,15 @@ import Web from './Web/Web'
 import All from './All/All'
 import NextPage from './Next/NextPage'
 import Mobile from './Mobile/Mobile'
+import { ProjectosInterface } from '@/interfaces/database'
 
 interface Project {
     project: "Web" | "Mobile" | "Next.js" | "React" | "All"
 }
-interface Projects {
-    dataProject: [
-        {
 
-            repo: string;
-            title: string;
-            description: string;
-            image: string;
-            url: string;
-            tecnologies: string[];
-        }
-    ]
+const Projects = (dataProject: ProjectosInterface) => {
 
-
-}
-
-
-const Projects = (dataProject: Projects) => {
-
-    console.log(dataProject.dataProject)
+    // console.log(dataProject.dataProject)
 
     const [projectToShow, setProjectToShow] = useState<Project>({ project: "All" })
 
@@ -41,7 +26,7 @@ const Projects = (dataProject: Projects) => {
                     <button className="bg-white rounded-md p-2 ml-2 mr-2" onClick={() => setProjectToShow({ project: "Mobile" })}>Mobile</button>
                 </div>
                 {
-                    projectToShow.project === "All" ? <All /> : projectToShow.project === "React" ? <Web /> : projectToShow.project === "Next.js" ? <NextPage /> : projectToShow.project === "Mobile" ? <Mobile /> : <Web />
+                    projectToShow.project === "All" ? <All dataProject={dataProject.dataProject} /> : projectToShow.project === "React" ? <Web /> : projectToShow.project === "Next.js" ? <NextPage /> : projectToShow.project === "Mobile" ? <Mobile /> : <Web />
                 }
             </div>
         </div>

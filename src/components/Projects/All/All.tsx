@@ -1,26 +1,21 @@
+import { ProjectosInterface } from '@/interfaces/database'
 import React from 'react'
 
-const All = () => {
+const All = ({ dataProject }: ProjectosInterface) => {
+
+    console.log(dataProject)
     return (
         <div className="grid sm:grid-cols-1 gap-1  md:grid-cols-2 gap-2 lg:grid-cols-3 gap-3 xl:grid-cols-3 gap-4">
-            <div className="bg-white rounded-md p-5">
-                <h1 className="text-2xl font-bold text-black">Project 1</h1>
-            </div>
-            <div className="bg-white rounded-md p-5">
-                <h1 className="text-2xl font-bold text-black">Project 2</h1>
-            </div>
-            <div className="bg-white rounded-md p-5">
-                <h1 className="text-2xl font-bold text-black">Project 3</h1>
-            </div>
-            <div className="bg-white rounded-md p-5">
-                <h1 className="text-2xl font-bold text-black">Project 4</h1>
-            </div>
-            <div className="bg-white rounded-md p-5">
-                <h1 className="text-2xl font-bold text-black">Project 5</h1>
-            </div>
-            <div className="bg-white rounded-md p-5">
-                <h1 className="text-2xl font-bold text-black">Project 6</h1>
-            </div>
+            {
+                dataProject.map((data) => {
+                    return (
+                        <div className="rounded overflow-auto card bg-white  p-5" key={data.name}>
+                            <h1 className="text-2xl font-bold text-black">{data.name}</h1>
+
+                        </div>
+                    )
+                })
+            }
         </div>
     )
 }
