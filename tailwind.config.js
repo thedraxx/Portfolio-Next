@@ -12,9 +12,12 @@ module.exports = {
     extend: {},
     colors: {
       primary: '#0D6EFD',
-      black: "#000000",
+      black: "#040303",
       white: "#F9FAFB",
-      purple: "#8B5CF6",
+      purple: "#301E67",
+      purpleClear: "#301E67",
+      card: "#000000",
+      tecnologies: "#434242",
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
