@@ -3,10 +3,7 @@ import * as navbarStyles from '../../styles/Navbar.module.css'
 
 const Navbar = () => {
 
-    const [isOpen, setIsOpen] = React.useState(false);
-
-    console.log(isOpen)
-
+    const [isOpen, setIsOpen] = React.useState(true);
 
     return (
         <>
