@@ -7,6 +7,7 @@ import { GetStaticProps } from 'next';
 import "../../src/firebase/config.js";
 import { GeneralProyects } from "@/interface/Proyects.js";
 import Skills from '@/components/Skills/Skills';
+import { useEffect } from "react";
 
 export default function Home(dataProject: GeneralProyects) {
 

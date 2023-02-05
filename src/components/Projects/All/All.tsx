@@ -24,7 +24,7 @@ const All = ({ dataProject }: ProjectosInterface) => {
                 dataProject.map((data) => {
                     return (
                         <div className="rounded overflow-auto card bg-card p-10  brightness-100 hover:brightness-75 " key={data.name}>
-                            <div className="flex-column justify-center items-center mt-5 w-100 scale-95 rounded-xl shadow-purple hover:scale-100 ease-in duration-300  hover:shadow-purpleClear shadow-2xl ">
+                            <div className="flex-column justify-center items-center mt-5 w-100 scale-95 rounded-xl shadow-yellow hover:scale-100 ease-in duration-300  hover:shadow-yellowPressed shadow-lg ">
                                 <div className='sm: flex flex-col  justify-center items-center   lg: flex flex-row justify-center items-center'>
                                     <img src={data.image} alt={data.name} className='w-full h-50 object-cover' />
                                     <div className={`${style.imageDiv} `}>

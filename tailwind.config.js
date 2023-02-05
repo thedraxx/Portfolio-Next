@@ -12,13 +12,16 @@ module.exports = {
     extend: {},
     colors: {
       primary: '#0D6EFD',
-      black: "#040303",
-      buttonBackground: "#101010",
+      black: "#1f2023",
+      buttonBackground: "#080808",
       white: "#F9FAFB",
       purple: "#301E67",
       purpleClear: "#301E67",
       card: "#000000",
       tecnologies: "#434242",
+      yellow: "#eaff6a",
+      yellowPressed: "#e5ff25",
+      navbar: "#27282d",
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
