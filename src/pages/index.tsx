@@ -5,11 +5,10 @@ import Projects from "@/components/Projects/Projects";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 import { GetStaticProps } from 'next';
 import "../../src/firebase/config.js";
-import { ProjectosInterface } from "@/interfaces/database.jsx";
+import { GeneralProyects } from "@/interface/Proyects.js";
+import Skills from '@/components/Skills/Skills';
 
-
-
-export default function Home(dataProject: ProjectosInterface) {
+export default function Home(dataProject: GeneralProyects) {
 
   return (
     <div style={{ backgroundColor: "#030303" }}>
@@ -17,6 +16,7 @@ export default function Home(dataProject: ProjectosInterface) {
         <Welcome />
         <AboutMe />
         <Projects dataProject={dataProject.dataProject} />
+        <Skills />
       </Layout>
     </div>
   )

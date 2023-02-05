@@ -13,6 +13,7 @@ module.exports = {
     colors: {
       primary: '#0D6EFD',
       black: "#040303",
+      buttonBackground: "#101010",
       white: "#F9FAFB",
       purple: "#301E67",
       purpleClear: "#301E67",

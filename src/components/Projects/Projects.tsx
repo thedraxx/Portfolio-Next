@@ -1,19 +1,10 @@
 import React, { useState } from 'react'
-import Web from './Web/Web'
-import All from './All/All'
-import NextPage from './Next/NextPage'
-import Mobile from './Mobile/Mobile'
-import { ProjectosInterface } from '@/interfaces/database'
+import RenderProyects from './RenderProjects/RenderProyects';
+import { GeneralProyects, TypeOfProyects } from '@/interface/Proyects';
 
-interface Project {
-    project: "Web" | "Mobile" | "Next.js" | "React" | "All"
-}
+const Projects = (dataProject: GeneralProyects) => {
 
-const Projects = (dataProject: ProjectosInterface) => {
-
-    // console.log(dataProject.dataProject)
-
-    const [projectToShow, setProjectToShow] = useState<Project>({ project: "All" })
+    const [projectToShow, setProjectToShow] = useState<TypeOfProyects>({ project: "All" })
 
     return (
         <div className="flex flex-col justify-center items-center w-full mt-20">
@@ -26,7 +17,7 @@ const Projects = (dataProject: ProjectosInterface) => {
                     <button className="bg-white rounded-md p-2 ml-2 mr-2" onClick={() => setProjectToShow({ project: "Mobile" })}>Mobile</button>
                 </div>
                 {
-                    projectToShow.project === "All" ? <All dataProject={dataProject.dataProject} /> : projectToShow.project === "React" ? <Web /> : projectToShow.project === "Next.js" ? <NextPage /> : projectToShow.project === "Mobile" ? <Mobile /> : <Web />
+                    <RenderProyects dataProject={dataProject.dataProject} projectToShow={projectToShow.project} />
                 }
             </div>
         </div>
