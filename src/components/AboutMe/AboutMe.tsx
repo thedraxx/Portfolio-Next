@@ -7,7 +7,7 @@ const AboutMe = () => {
         <div className="flex flex-col justify-center items-center w-full " id='about'>
             <div className='w-100 h-100 flex flex-1 flex-col justify-center items-center'>
                 <h1 className="text-4xl font-bold text-white mt-5 mb-5 gradient_text ">About Me</h1>
-                <Image width={150} height={150} src={Profile} alt="Profile" className='flex-col justify-center items-center rounded-xl' />
+                <Image width={150} height={150} src={Profile} alt="Profile" className='flex-col justify-center items-center rounded-xl transform scale-x-10  hover:-scale-x-100 transition ease-in-out delay-50 ' />
                 <div className="flex flex-col mt-5  sm: w-56 lg:w-96  " >
                     <p className="text-white text-justify ">
                         {"Hi, I'm Francisco, a passionate front-end developer and student from Argentina. I started my journey as a developer almost two years ago in 2020, and I have a strong passion for creating intuitive and dynamic user experiences. I love learning new things and I'm always seeking new challenges to tackle."}
