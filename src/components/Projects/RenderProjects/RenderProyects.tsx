@@ -20,10 +20,10 @@ const RenderProyects = ({ dataProject, projectToShow }: Projects) => {
                                     <div className='sm: flex flex-col  justify-center items-center   lg: flex flex-row justify-center items-center'>
                                         <img src={data.image} alt={data.name} className='w-full h-50 object-cover' />
                                         <div className={`${style.imageDiv} `}>
-                                            <a href="google.com">
+                                            <a href={data.repo}>
                                                 <AiFillGithub size={40} color='white' className='p-2 rounded-xl bg-buttonBackground mr-2 ml-2 mb-2 ' />
                                             </a>
-                                            <a>
+                                            <a href={data.url}>
                                                 <AiFillEye size={40} color='white' className='p-2 rounded-xl bg-buttonBackground  mr-2 ml-2 mb-2' />
                                             </a>
                                         </div>

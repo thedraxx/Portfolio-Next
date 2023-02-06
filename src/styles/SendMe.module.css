@@ -1,0 +1,25 @@
+.textContact {
+    position: relative;
+
+    opacity: 100%;
+    position: relative;
+margin-right: 25px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 100%;
+    font-size: 35px;
+    color:aliceblue;
+    border: 5px solid #ffffff;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    }
+
+
+@media screen and (max-width: 1024px) {
+    .textContact {
+        display: none;
+    }
+}
+    

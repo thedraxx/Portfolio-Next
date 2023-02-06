@@ -10,10 +10,10 @@ const AboutMe = () => {
                 <Image width={150} height={150} src={Profile} alt="Profile" className='flex-col justify-center items-center rounded-xl' />
                 <div className="flex flex-col mt-5  sm: w-56 lg:w-96  " >
                     <p className="text-white text-justify ">
-                        Hi! My name is Jean, Im from Venezuela and I have +1 year of work experience in JavaScript/TypeScript and React, Im a lover of page design or other things and whenever I can I try to learn new technologies since I discovered programming at 16. I love what I do and I help others with what I can, I also use in web, mobile and desktop development Next.js, Angular, Ionic and Electron implementing good practices, clean architecture, pixel perfect and agile methodologies.
+                        {"Hi, I'm Francisco, a passionate front-end developer and student from Argentina. I started my journey as a developer almost two years ago in 2020, and I have a strong passion for creating intuitive and dynamic user experiences. I love learning new things and I'm always seeking new challenges to tackle."}
                     </p>
                     <div className='bg-yellow mt-5 rounded-md flex flex-row justify-center w-50 items-center p-2   '>
-                        <a href='https://www.canva.com/design/DAFZiFE_bxk/Vg793k7J3e2vxJIWZieh6Q/view?utm_content=DAFZiFE_bxk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'>ver CV</a>
+                        <a href='https://www.canva.com/design/DAFZvh3hbEM/dvfAsUgt6vT3eKpJL9kZ5Q/view?utm_content=DAFZvh3hbEM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink'>Check Resume</a>
                     </div>
                 </div>
 
