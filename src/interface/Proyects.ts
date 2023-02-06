@@ -24,7 +24,7 @@ export interface Projects {
       name: string;
     }
   ];
-  projectToShow: "Web App" | "Mobile" | "Next.js" | "React" | "All";
+  projectToShow: "Web App" | "Mobile" | "Next.js" | "React" | "Web App" | "All";
 }
 
 export interface infoProyects {
