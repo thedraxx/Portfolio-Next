@@ -1,4 +1,7 @@
-import React, { useRef } from 'react'
+//  @ts-nocheck comment at the top of the file
+
+import { useRef } from 'react'
+import * as React from 'react'
 import emailjs from '@emailjs/browser';
 import { useForm } from '@/hooks/useFom';
 import styles from "../../styles/SendMe.module.css";
