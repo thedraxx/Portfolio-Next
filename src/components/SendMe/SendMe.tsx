@@ -2,8 +2,9 @@ import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser';
 import { useForm } from '@/hooks/useFom';
 import styles from "../../styles/SendMe.module.css";
+
 const SendMe = () => {
-    const form = useRef<undefined>()
+    const ref = useRef<HTMLDivElement | null | any>(null);
 
     const [formValues, handleInputChange] = useForm({
         name: '',
@@ -27,7 +28,7 @@ const SendMe = () => {
     return (
         <div className="flex rounded-xl justify-center items-center h-auto w-auto p-10 min-w-full bg-gradient-to-r from-yellow to-purple  ">
             <h1 className={`${styles.textContact}`}>Contact Me!</h1>
-            <form onSubmit={sendEmail} ref={form} className=" max-w-sm bg-black p-10 rounded-lg  w-96" >
+            <form onSubmit={sendEmail} ref={ref} className=" max-w-sm bg-black p-10 rounded-lg  w-96" >
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3 ">
                         <label className="block text-white font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
