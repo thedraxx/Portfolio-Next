@@ -26,7 +26,6 @@ const SendMe = () => {
 
             if (message.length < 10) return alert('Por favor, introduzca un mensaje de al menos 10 caracteres')
 
-
             await emailjs.sendForm('service_qksi4tc', 'template_zqzc909', form.current, 'ywb4feFd4jk6dBlo8')
             alert('Mensaje enviado correctamente')
         }

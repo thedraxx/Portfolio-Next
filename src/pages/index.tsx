@@ -43,6 +43,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   return {
     props: {
       dataProject: DataArray
-    }
+    },
+    revalidate: 86400
   }
 }
