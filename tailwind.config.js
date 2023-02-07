@@ -25,7 +25,7 @@ module.exports = {
       tecnologies: "#434242",
       yellow: "#eaff6a",
       yellowPressed: "#e5ff25",
-      navbar: "#27282d",
+      navbar: "#222222",
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
