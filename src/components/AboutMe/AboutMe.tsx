@@ -13,7 +13,7 @@ const AboutMe = () => {
                         {"Hi, I'm Francisco, a passionate front-end developer and student from Argentina. I started my journey as a developer almost two years ago in 2020, and I have a strong passion for creating intuitive and dynamic user experiences. I love learning new things and I'm always seeking new challenges to tackle."}
                     </p>
                     <div className='bg-yellow mt-5 rounded-md flex flex-row justify-center w-50 items-center p-2   '>
-                        <a href='https://www.canva.com/design/DAFZvh3hbEM/dvfAsUgt6vT3eKpJL9kZ5Q/view?utm_content=DAFZvh3hbEM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink'>Check Resume</a>
+                        <a href='https://www.canva.com/design/DAFZiFE_bxk/Vg793k7J3e2vxJIWZieh6Q/view?utm_content=DAFZiFE_bxk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'>Check Resume</a>
                     </div>
                 </div>
 
