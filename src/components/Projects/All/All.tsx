@@ -31,9 +31,11 @@ const All = ({ dataProject }: ProjectosInterface) => {
                                         <a href={data.repo}>
                                             <AiFillGithub size={40} color='white' className='p-2 rounded-xl bg-buttonBackground mr-2 ml-2 mb-2 ' />
                                         </a>
-                                        <a href={data.url}>
-                                            <AiFillEye size={40} color='white' className='p-2 rounded-xl bg-buttonBackground  mr-2 ml-2 mb-2' />
-                                        </a>
+                                        {
+                                            data.url === "" ? <div></div> : <a href={data.url}>
+                                                <AiFillEye size={40} color='white' className='p-2 rounded-xl bg-buttonBackground  mr-2 ml-2 mb-2' />
+                                            </a>
+                                        }
                                     </div>
                                 </div>
                                 <div>

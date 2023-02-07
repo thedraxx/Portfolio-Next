@@ -15,6 +15,7 @@ const Projects = (dataProject: GeneralProyects) => {
                     <button className={`${projectToShow.project === "React" ? "bg-yellow" : "bg-white"} rounded-md p-2 ml-2 mr-2`} onClick={() => setProjectToShow({ project: "React" })}>React</button>
                     <button className={`${projectToShow.project === "Next.js" ? "bg-yellow" : "bg-white"} rounded-md p-2 ml-2 mr-2`} onClick={() => setProjectToShow({ project: "Next.js" })}>Next.js</button>
                     <button className={`${projectToShow.project === "Mobile" ? "bg-yellow" : "bg-white"} rounded-md p-2 ml-2 mr-2`} onClick={() => setProjectToShow({ project: "Mobile" })}>Mobile</button>
+                    <button className={`${projectToShow.project === "Web App" ? "bg-yellow" : "bg-white"} rounded-md p-2 ml-2 mr-2`} onClick={() => setProjectToShow({ project: "Web App" })}>Web</button>
                 </div>
                 {
                     <RenderProyects dataProject={dataProject.dataProject} projectToShow={projectToShow.project} />

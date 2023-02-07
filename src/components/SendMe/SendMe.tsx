@@ -8,18 +8,24 @@ const SendMe = () => {
     const form = useRef<HTMLDivElement | null | any>(null);
 
     const [formValues, handleInputChange] = useForm({
-        name: '',
         email: '',
         message: ''
     })
 
-    const { name, email, message }: any = formValues
+    const { email, message }: any = formValues
 
     const sendEmail = async (e: { preventDefault: () => void; }) => {
+
         e.preventDefault()
         try {
-            const sendMessage = await emailjs.sendForm('service_qksi4tc', 'template_zqzc909', form.current, 'ywb4feFd4jk6dBlo8')
-            console.log(sendMessage)
+            if (email === '' || message === '') return alert('Por favor, rellene todos los campos')
+
+            if (!/\S+@\S+\.\S+/.test(email)) return alert('Por favor, introduzca un email válido')
+
+            if (message.length < 10) return alert('Por favor, introduzca un mensaje de al menos 10 caracteres')
+
+            await emailjs.sendForm('service_qksi4tc', 'template_zqzc909', form.current, 'ywb4feFd4jk6dBlo8')
+            alert('Mensaje enviado correctamente')
         }
         catch (err) {
             alert('Error al enviar el mensaje')
@@ -27,7 +33,7 @@ const SendMe = () => {
     }
 
     return (
-        <div className="flex rounded-xl justify-center items-center h-auto w-auto p-10 min-w-full bg-gradient-to-r from-yellow to-purple  ">
+        <div className="flex rounded-xl justify-center items-center h-auto w-auto p-10 min-w-full bg-gradient-to-r from-yellow to-purple  " id="contact">
             <h1 className={`${styles.textContact}`}>Contact Me!</h1>
             <form onSubmit={sendEmail} ref={form} className=" max-w-sm bg-black p-10 rounded-lg  w-96" >
 
@@ -57,8 +63,8 @@ const SendMe = () => {
                         </label>
                     </div>
                     <div className="md:w-2/3">
-                        <input
-                            className="rounded-md bg-gray-200 appearance-none border-2 border-gray-200 w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                        <textarea
+                            className="rounded-md p-5 gray-200 appearance-none border-5 border-gray-200 w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                             type="text"
                             placeholder="Enter Message"
                             name="message"

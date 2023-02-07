@@ -17,6 +17,9 @@ const Navbar = () => {
         window.location.hash = "#skills";
     };
 
+    const contact = () => {
+        window.location.hash = "#contact";
+    };
 
     return (
         <>
@@ -30,15 +33,18 @@ const Navbar = () => {
                     </button>
                 </div>
                 <div className={`w-full block flex-end lg:flex lg:items-center  ${isOpen ? "lg:w-auto hidden " : "lg:w-auto"}`}>
-                    <div className={`text-sm lg:flex-grow `}>
-                        <a onClick={redirigirAbout} href="#responsive-header" className="block mt-4 mr-10 lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow mr-4 text-white text-lg  transition ease-in-out delay-50">
+                    <div className={`text-sm   lg:flex-grow  `}>
+                        <a onClick={redirigirAbout} href="#responsive-header" className="block mt-4  lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow mr-4 text-white text-lg  transition ease-in-out delay-50">
                             About Me
                         </a>
-                        <a onClick={myProjects} href="#responsive-header" className="block mt-4  mr-10 lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow mr-4 text-white text-lg  transition ease-in-out delay-50">
-                            My Projects
+                        <a onClick={myProjects} href="#responsive-header" className="block mt-4   lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow mr-4 text-white text-lg  transition ease-in-out delay-50">
+                            Projects
                         </a>
-                        <a onClick={skills} href="#responsive-header" className="block mt-4   mr-10 lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow text-white text-lg  transition ease-in-out delay-50">
+                        <a onClick={skills} href="#responsive-header" className="block mt-4   mr-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow text-white text-lg  transition ease-in-out delay-50">
                             Skills
+                        </a>
+                        <a onClick={contact} href="#responsive-header" className="block mt-4   lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow mr-4 text-white text-lg  transition ease-in-out delay-50">
+                            Contact
                         </a>
                     </div>
                 </div>
