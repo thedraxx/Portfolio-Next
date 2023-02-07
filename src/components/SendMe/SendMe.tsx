@@ -1,7 +1,5 @@
 //  @ts-nocheck comment at the top of the file
-
-import { useRef } from 'react'
-import * as React from 'react'
+import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser';
 import { useForm } from '@/hooks/useFom';
 import styles from "../../styles/SendMe.module.css";
@@ -47,7 +45,7 @@ const SendMe = () => {
                     </div>
                     <div className="md:w-2/3">
                         <input
-                            className="rounded-md bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                            className="rounded-md bg-gray-200 appearance-none border-2 border-gray-200 w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                             type="text"
                             placeholder="Enter email"
                             name="email"
