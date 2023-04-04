@@ -10,7 +10,7 @@ const SocialMedia = () => {
             <a href="https://github.com/thedraxx" target="_blank" rel="noreferrer">
                 <FaGithubAlt size={35} className='rounded-lg mr-10 mt-5 bg-white hover:bg-yellow hover:rotate-45 transition ease-in-out delay-20' />
             </a>
-            <a href="https://www.linkedin.com/in/cerranofrancisco/" target="_blank" rel="noreferrer" >
+            <a href="https://www.linkedin.com/in/iscodev/" target="_blank" rel="noreferrer" >
                 <FaLinkedin size={35} className='rounded-lg mr-10 mt-5 bg-white hover:bg-yellow hover:rotate-45  transition ease-in-out delay-20' />
             </a>
 
