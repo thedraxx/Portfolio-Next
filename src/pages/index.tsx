@@ -7,20 +7,19 @@ import { GetStaticProps } from 'next';
 import "../../src/firebase/config.js";
 import { GeneralProyects } from "@/interface/Proyects";
 import Skills from '@/components/Skills/Skills';
-import { useEffect } from "react";
 import SendMe from "@/components/SendMe/SendMe";
 
 export default function Home(dataProject: GeneralProyects) {
 
   return (
     <div style={{ backgroundColor: "#030303" }}>
-      <Layout title="Portafolio">
-        <Welcome />
-        <AboutMe />
-        <Projects dataProject={dataProject.dataProject} />
-        <Skills />
-        <SendMe />
-      </Layout>
+        <Layout title="Portafolio">
+          <Welcome />
+          <AboutMe />
+          <Projects dataProject={dataProject.dataProject} />
+          <Skills />
+          <SendMe />
+        </Layout>
     </div>
   )
 }

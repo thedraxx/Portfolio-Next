@@ -1,9 +1,12 @@
 import React from 'react'
 import * as navbarStyles from '../../styles/Navbar.module.css'
+import { useContext } from 'react';
+import { ChangeLanContext } from '@/context';
 
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = React.useState(true);
+    const{ChangeLanguage, IsLanguageActive} = useContext(ChangeLanContext)
 
     const redirigirAbout = () => {
         window.location.hash = "#about";
@@ -35,16 +38,28 @@ const Navbar = () => {
                 <div className={`w-full block flex-end lg:flex lg:items-center  ${isOpen ? "lg:w-auto hidden " : "lg:w-auto"}`}>
                     <div className={`text-sm   lg:flex-grow  `}>
                         <a onClick={redirigirAbout} href="#responsive-header" className="block mt-4  lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow mr-4 text-white text-lg  transition ease-in-out delay-50">
-                            About Me
+                           {
+                                 IsLanguageActive ? "Sobre mi" : "About me"
+                           }
                         </a>
                         <a onClick={myProjects} href="#responsive-header" className="block mt-4   lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow mr-4 text-white text-lg  transition ease-in-out delay-50">
-                            Projects
+                            
+                        {
+                                    IsLanguageActive ? "Proyectos" : "Projects"
+                        }
                         </a>
                         <a onClick={skills} href="#responsive-header" className="block mt-4   mr-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow text-white text-lg  transition ease-in-out delay-50">
-                            Skills
+                            {
+                                    IsLanguageActive ? "Habilidades" : "Skills"
+                            }
                         </a>
                         <a onClick={contact} href="#responsive-header" className="block mt-4   lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow mr-4 text-white text-lg  transition ease-in-out delay-50">
-                            Contact
+                            {
+                                    IsLanguageActive ? "Contacto" : "Contact"
+                            }
+                        </a>
+                        <a onClick={ChangeLanguage} href="#" className="block mt-4   lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow mr-4 text-white text-lg  transition ease-in-out delay-50">
+                            English <span className='text-yellow'>/</span> Español
                         </a>
                     </div>
                 </div>

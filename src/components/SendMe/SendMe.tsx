@@ -1,11 +1,13 @@
 //  @ts-nocheck comment at the top of the file
-import React, { useRef } from 'react'
+import React, { useRef,useContext } from 'react'
 import emailjs from '@emailjs/browser';
 import { useForm } from '@/hooks/useFom';
 import styles from "../../styles/SendMe.module.css";
+import { ChangeLanContext } from '@/context';
 
 const SendMe = () => {
     const form = useRef<HTMLDivElement | null | any>(null);
+    const { IsLanguageActive } = useContext(ChangeLanContext)
 
     const [formValues, handleInputChange] = useForm({
         email: '',
@@ -34,13 +36,19 @@ const SendMe = () => {
 
     return (
         <div className="flex rounded-xl justify-center items-center h-auto w-auto p-10 min-w-full bg-gradient-to-r from-yellow to-purple  " id="contact">
-            <h1 className={`${styles.textContact}`}>Contact Me!</h1>
+            <h1 className={`${styles.textContact}`}>
+                {
+                    IsLanguageActive ? 'Contacto' : 'Contact'
+                }
+            </h1>
             <form onSubmit={sendEmail} ref={form} className=" max-w-sm bg-black p-10 rounded-lg  w-96" >
 
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
                         <label className="block text-white font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Your Email:
+                            {
+                                IsLanguageActive ? 'Tu Email:' : 'Your Email:'
+                            }
                         </label>
                     </div>
                     <div className="md:w-2/3">
@@ -59,7 +67,9 @@ const SendMe = () => {
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
                         <label className="block text-white font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Your Message:
+                            {
+                                IsLanguageActive ? 'Mensaje:' : 'Message:'
+                            }
                         </label>
                     </div>
                     <div className="md:w-2/3">
@@ -79,7 +89,9 @@ const SendMe = () => {
                     <div className="md:w-1/3"></div>
                     <div className="md:w-2/3">
                         <button className="shadow flex flex-auto justify-center items-center bg-card hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
-                            Send
+                           {
+                                 IsLanguageActive ? 'Enviar' : 'Send'
+                           }
                         </button>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 export interface GeneralProyects {
   dataProject: [
     {
+      ESDescription: string;
       repo: string;
       title: string;
       description: string;
@@ -15,6 +16,7 @@ export interface GeneralProyects {
 export interface Projects {
   dataProject: [
     {
+      ESDescription: string;
       repo: string;
       title: string;
       description: string;
@@ -35,6 +37,7 @@ export interface infoProyects {
   url: string;
   tecnologies: string;
   name: string;
+  ESDescription: string;
 }
 
 export interface TypeOfProyects {
