@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { SiReact, SiNextdotjs, SiRedux, SiTailwindcss, SiCss3, SiHtml5, SiSass, SiJavascript, SiTypescript, SiGit, SiAdobephotoshop, SiAdobepremierepro, SiStyledcomponents } from 'react-icons/si'
+import { ChangeLanContext } from '@/context';
 
 const Skills = () => {
-
+    const { IsLanguageActive } = useContext(ChangeLanContext)
 
     return (
         <div className="flex flex-col justify-center items-center w-full " id='skills'>
             <div className='w-100 h-100 flex flex-1 flex-col justify-center items-center'>
-                <h1 className="text-4xl font-bold text-white mt-5 mb-5 gradient_text ">Skills</h1>
+                <h1 className="text-4xl font-bold text-white mt-5 mb-5 gradient_text ">
+                    {
+                        IsLanguageActive ? 'Habilidades' : 'Skills'
+                    }
+                </h1>
                 {
                     <div className="p-5 items-center justify-center container mx-auto h-auto w-auto grid sm:grid-cols-2 gap-2 md:grid-cols-2 gap-2 lg:grid-cols-3 gap-3 xl:grid-cols-3 gap-4  ">
 

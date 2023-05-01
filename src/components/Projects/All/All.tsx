@@ -1,7 +1,8 @@
 import React from 'react'
 import { AiFillGithub, AiFillEye } from 'react-icons/ai'
 import style from "../../../styles/All.module.css"
-
+import { ChangeLanContext } from '@/context';
+import { useContext } from 'react';
 export interface ProjectosInterface {
     dataProject: [
         {
@@ -18,6 +19,7 @@ export interface ProjectosInterface {
 
 
 const All = ({ dataProject }: ProjectosInterface) => {
+    const { IsLanguageActive } = useContext(ChangeLanContext)
     return (
         <div className="container mx-auto h-auto w-auto grid sm:grid-cols-2 gap-2  md:grid-cols-2 gap-2 lg:grid-cols-3 gap-3 xl:grid-cols-3 gap-4">
             {
@@ -42,7 +44,12 @@ const All = ({ dataProject }: ProjectosInterface) => {
                                     <h2 className='text-tecnologies text-3x1 font-bold pt-5 pl-5'>{data.tecnologies}</h2>
                                 </div>
                                 <h1 className="text-2xl font-bold text-white pl-5">{data.name}</h1>
-                                <h4 className="text-white text-10 justify-center items-center w-auto p-5">{data.description}</h4>
+                                <h4 className="text-white text-10 justify-center items-center w-auto p-5">
+                                    {
+                                        IsLanguageActive ? data.ESDescription :
+                                    data.description
+                                    }
+                                    </h4>
                             </div>
                         </div>
                     )
