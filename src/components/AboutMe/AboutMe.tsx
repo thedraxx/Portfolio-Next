@@ -3,6 +3,8 @@ import Profile from "../../../public/assets/profile.jpg"
 import Image from 'next/image';
 import { ChangeLanContext } from '@/context';
 import { useContext } from 'react';
+import CV from "../../../public/assets/CV.pdf"
+
 const AboutMe = () => {
     const { IsLanguageActive } = useContext(ChangeLanContext)
 
@@ -38,7 +40,8 @@ const AboutMe = () => {
                     >
                         <a
                             target="_blank"
-                            href='https://www.canva.com/design/DAFbctdw6bc/swJyLv5qczjY97G5fB2nDQ/edit?utm_content=DAFbctdw6bc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' rel="noreferrer">
+                            download={"Francisco_CV.pdf"}
+                            href='https://docs.google.com/document/u/1/d/e/2PACX-1vScQwYuLLPSA_lCao782o9I-h-sLhv5XshTPjrsx6oqPrFKhD7R21iFC6DmvhDxvtXEtDi9n0yM022S/pub' rel="noreferrer">
                                 {
                                     IsLanguageActive ? "Mirar CV" : "Check Resume"
                                 }

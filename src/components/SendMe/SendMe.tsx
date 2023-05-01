@@ -55,7 +55,7 @@ const SendMe = () => {
                         <input
                             className="rounded-md bg-gray-200 appearance-none border-2 border-gray-200 w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                             type="text"
-                            placeholder="Enter email"
+                            placeholder={IsLanguageActive ? 'Introduzca su email' : 'Enter your email' }
                             name="email"
                             autoComplete="off"
                             value={email}
@@ -76,7 +76,7 @@ const SendMe = () => {
                         <textarea
                             className="rounded-md p-5 gray-200 appearance-none border-5 border-gray-200 w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                             type="text"
-                            placeholder="Enter Message"
+                            placeholder={IsLanguageActive ? 'Introduzca su mensaje' : 'Enter your message'}
                             name="message"
                             autoComplete="off"
                             value={message}
