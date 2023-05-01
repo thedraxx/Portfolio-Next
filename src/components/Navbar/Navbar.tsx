@@ -59,7 +59,9 @@ const Navbar = () => {
                             }
                         </a>
                         <a onClick={ChangeLanguage} href="#" className="block mt-4   lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow mr-4 text-white text-lg  transition ease-in-out delay-50">
-                            English <span className='text-yellow'>/</span> Español
+                            {
+                                    IsLanguageActive ? "Ingles" : "Spanish"
+                            }
                         </a>
                     </div>
                 </div>

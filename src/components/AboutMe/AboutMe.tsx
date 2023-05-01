@@ -3,7 +3,6 @@ import Profile from "../../../public/assets/profile.jpg"
 import Image from 'next/image';
 import { ChangeLanContext } from '@/context';
 import { useContext } from 'react';
-import CV from "../../../public/assets/CV.pdf"
 
 const AboutMe = () => {
     const { IsLanguageActive } = useContext(ChangeLanContext)
