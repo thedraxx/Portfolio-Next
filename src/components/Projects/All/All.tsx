@@ -13,6 +13,7 @@ export interface ProjectosInterface {
             url: string;
             tecnologies: string;
             name: string;
+            ESDescription: string;
         }
     ]
 }
